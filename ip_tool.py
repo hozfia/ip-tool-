@@ -37,11 +37,13 @@ class ip_tool (object) :
     def convert (self , list) :
         res = int("".join(map(str,list)))
         return res
+    def display_ip (self) :
+        return str(self.ip_digit(1)) +"."+ str(self.ip_digit(2)) +"."+ str(self.ip_digit(3)) + "."+str(self.ip_digit(4))
  
 
 #####################################    
 ip1 = ip_tool("323.23.21.3")
-print(ip1.ip_digit(4))
+
 
 				
 				
