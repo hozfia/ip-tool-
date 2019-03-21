@@ -39,10 +39,20 @@ class ip_tool (object) :
         return res
     def display_ip (self) :
         return str(self.ip_digit(1)) +"."+ str(self.ip_digit(2)) +"."+ str(self.ip_digit(3)) + "."+str(self.ip_digit(4))
- 
+    def ip_counter (self):
+        for i in range(self.ip_digit(1), 255) :
+            
+            for ii in range(self.ip_digit(2), 255):
+                
+                for iii in range(self.ip_digit(3), 255):
+                    
+                    for iiii in range(self.ip_digit(4), 255):
+                        
+                        print str(i) +"."+ str(ii) +"."+ str(iii) +"."+ str(iiii) 
+                        
 
 #####################################    
-ip1 = ip_tool("323.23.21.3")
+ip1 = ip_tool("155.23.21.3")
 
 
 				
