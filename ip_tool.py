@@ -40,15 +40,17 @@ class ip_tool (object) :
     def display_ip (self) :
         return str(self.ip_digit(1)) +"."+ str(self.ip_digit(2)) +"."+ str(self.ip_digit(3)) + "."+str(self.ip_digit(4))
     def ip_counter (self , to_ip):
-        for i in range(self.ip_digit(1),156) :
-            print i 
-            for ii in range(self.ip_digit(2), self.coustom_ipadd_saptr(to_ip,2)):
-                
-                for iii in range(self.ip_digit(3), self.coustom_ipadd_saptr(to_ip,3)):
-                    
-                    for iiii in range(self.ip_digit(4),self.coustom_ipadd_saptr(to_ip,4)):
-                        
-                        print str(i) +"."+ str(ii) +"."+ str(iii) +"."+ str(iiii)
+        if self.ip_digit(1) == self.coustom_ipadd_saptr(to_ip,1) :
+            for ii in range(self.ip_digit(2), 255):
+                if ii == 255 :
+                    ii = 0 
+                for iii in range(self.ip_digit(3), 255):
+                    if iii == 255 :
+                        iii = 0 
+                    for iiii in range(self.ip_digit(4),255):
+                        if iiii == 255 :
+                            iiii = 0 
+                        print str(self.ip_digit(1)) +"."+ str(ii) +"."+ str(iii) +"."+ str(iiii)
 
                         
     def coustom_ipadd_saptr(self , ipadd , digit_name) :
